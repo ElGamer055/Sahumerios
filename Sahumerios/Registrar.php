@@ -10,52 +10,36 @@
     
     <title>Gordines</title>
 </head>
-<body>
-    <div class="wrapper">
+    <form action= 'metadatos.php' method = 'post' class="wrapper">
         <div class="form-box login">
-            <h2>Iniciar Sesión</h2>
-            <div class="input-box">
-                <input type="email" required placeholder=" ">
-                <label>Email</label>
-            </div>
-            <div class="input-box">
-                <input type="password" required placeholder=" ">
-                <label>Contraseña</label>
-            </div>
-            <button type="submit" class="btn">Ingresar</button>
-            <div class="login-register">
-                <p>¿No tienes cuenta? <a href="#" class="register-link">Regístrate</a></p>
-            </div>
-        </div>
-
-        <div class="form-box register">
             <h2>Registro</h2>
             <div class="input-box">
-                <input type="text" required placeholder=" ">
+                <input type="text" placeholder=" " maxlength="40">
                 <label>Nombre de usuario</label>
             </div>
             <div class="input-box">
-                <input type="text" required placeholder=" ">
+                <input type="text" placeholder=" " maxlength="40">
                 <label>Nombre</label>
             </div>
             <div class="input-box">
-                <input type="text" required placeholder=" ">
+                <input type="text"  placeholder=" " maxlength="40">
                 <label>Apellido</label>
             </div>
             <div class="input-box">
-                <input type="number" required placeholder=" ">
+                <input type="number" placeholder=" " maxlength="12">
                 <label>Telefono</label>
             </div>
             <div class="input-box">
-                <input type="password" required placeholder=" ">
+                <input type="password" placeholder=" " maxlength="40">
                 <label>Contraseña</label>
             </div>
             <button type="submit" class="btn">Registrarse</button>
             <div class="login-register">
-                <p>¿Ya tienes cuenta? <a href="#" class="login-link">Iniciar Sesión</a></p>
+                <p>¿Ya tienes cuenta? <a href="Login.php" class="login-link">Iniciar Sesión</a></p>
             </div>
         </div>
-    </div>
+</form>
+
 </body>
 
     <script src="js/main.js"></script>
