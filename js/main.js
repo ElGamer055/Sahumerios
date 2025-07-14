@@ -1,17 +1,16 @@
-const wrapper = document.querySelector('.wrapper');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
-const registerInputs = document.querySelectorAll('.form-box .register input');
-const loginInputs = document.querySelectorAll('.form-box .login input');
+document.addEventListener("DOMContentLoaded", function () {
+  const frases = [
+    "Hoy es un buen día para un sahumerio.",
+    "Conéctate con tu esencia.",
+    "Respirá profundo y dejá que fluya.",
+    "Aromas que inspiran tu alma.",
+    "Un momento de paz cada día."
+  ];
 
-registerLink.addEventListener('click', () =>{
-    wrapper.classList.add('active');
-    registerInputs.forEach(input => input.setAttribute('required', 'true'));
-
-  // Quitar 'required' de los inputs del login
-  loginInputs.forEach(input => input.removeAttribute('required'));
-});
-
-loginLink.addEventListener('click', () =>{
-    wrapper.classList.remove('active');
+  const indice = Math.floor(Math.random() * frases.length);
+  const elemento = document.getElementById("frase-aleatoria");
+  
+  if (elemento) {
+    elemento.textContent = frases[indice];
+  }
 });
