@@ -13,6 +13,10 @@ body {
   margin: 0 auto;
 }
 
+.navbar-toggler-icon{
+  background-image:image(img);
+}
+
 header h1 {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   font-size: clamp(2rem, 6vw, 3rem);
