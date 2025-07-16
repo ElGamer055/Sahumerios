@@ -33,10 +33,6 @@
              <audio id="clickSound" src="emuo.mp3" preload="auto"></audio>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="catalogo.php"><i class="fa-solid fa-bag-shopping"></i> Catalogo</a>
-             <audio id="clickSound" src="emuo.mp3" preload="auto"></audio>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#" onclick="playSound()"> <i class="fa-solid fa-user"></i> Usuario</a>
              <audio id="clickSound" src="emuo.mp3" preload="auto"></audio>
           </li>
@@ -68,7 +64,10 @@
       <h2 id="frase-aleatoria"></h2>
     </header>
 
-    <h3>Nuevo e imperdible</h3>
+   <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
 
     <section class="products">
 
@@ -92,54 +91,55 @@
         <p>Pequeña descripción y su precio</p>
         <p><button> Agregar al carrito</button></p>
       </div>
+</section>
 
-    </section>
+<section class="products">
 
-<div class="promo-box container-fluid">
-  <div class="promo-inner">
-    <div class="promo-bg"></div>
+      <div class="product-card">
+        <img src="img/sahur.jpg" alt="Producto 1">
+        <p>Producto</p>
+        <p>Pequeña descripción y su precio</p>
+        <p><button> Agregar al carrito</button></p>
+      </div>
 
-    <div class="promo-buttons">
-      <a href="catalogo.php"><button class="promo-btn dark">Ver catálogo</button></a>
-      <a href="https://www.roblox.com"><button class="promo-btn purple">¿Cómo comprar?</button></a>
-      <a href="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT36fg28121RMt8fjDSSl58avFrWiTcwmDnpq_TEX0mB-91lJkOVZ4PAsGQyRLTKVWHBwDhYskoU4RhhizuRmFyi2q4TYJeoDSmIdw_izJ4sQ"><button class="promo-btn dark">Skibidi Marley</button></a>
-    </div>
+      <div class="product-card">
+        <img src="img/sahur.jpg" alt="Producto 2">
+        <p>Producto</p>
+        <p>Pequeña descripción y su precio</p>
+        <p><button> Agregar al carrito</button></p>
+      </div>
 
-    <div class="promo-image">
-      <img src="img/sahur.jpg" alt="Inciensos Aromanza">
-    </div>
-  </div>
-</div>
+      <div class="product-card">
+        <img src="img/sahur.jpg" alt="Producto 3">
+        <p>Producto</p>
+        <p>Pequeña descripción y su precio</p>
+        <p><button> Agregar al carrito</button></p>
+      </div>
+</section>
 
+<section class="products">
 
+      <div class="product-card">
+        <img src="img/sahur.jpg" alt="Producto 1">
+        <p>Producto</p>
+        <p>Pequeña descripción y su precio</p>
+        <p><button> Agregar al carrito</button></p>
+      </div>
 
-    <h3>Comentarios</h3>
+      <div class="product-card">
+        <img src="img/sahur.jpg" alt="Producto 2">
+        <p>Producto</p>
+        <p>Pequeña descripción y su precio</p>
+        <p><button> Agregar al carrito</button></p>
+      </div>
 
-    <section class="comments">
-        <div class="comment">
-            <p>“Yo soy Marley”</p>
-            <div class="comment-author">
-                <img src="img/marle.jpg" alt="Foto de Marley">
-                <span>Marley</span>
-            </div>
-        </div>
-
-        <div class="comment">
-            <p>“No puede ser, soy Marley”</p>
-            <div class="comment-author">
-                <img src="img/toilet.jpg" alt="Foto de Marley 2">
-                <span>Marley 2</span>
-            </div>
-        </div>
-
-        <div class="comment">
-            <p>“No puede ser, soy Marley”</p>
-            <div class="comment-author">
-                <img src="img/faraon.jpg" alt="Foto de Marley 2">
-                <span>Marley 2</span>
-            </div>
-        </div>
-    </section>
+      <div class="product-card">
+        <img src="img/sahur.jpg" alt="Producto 3">
+        <p>Producto</p>
+        <p>Pequeña descripción y su precio</p>
+        <p><button> Agregar al carrito</button></p>
+      </div>
+</section>
 
     <footer>
       <p>¡Te puedes registrar aquí!</p>
