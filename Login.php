@@ -15,11 +15,11 @@
         <div class="form-box login">
             <h2>Iniciar Sesión</h2>
             <div class="input-box">
-                <input type="email" required placeholder=" " maxlength="40">
+                <input type="text" name="User" required placeholder=" " maxlength="40">
                 <label>Nombre de usuario</label>
             </div>
             <div class="input-box">
-                <input type="password" required placeholder=" " maxlength="40">
+                <input type="password" name="Pass" required placeholder=" " maxlength="40">
                 <label>Contraseña</label>
             </div>
             <button type="submit" class="btn">Ingresar</button>
