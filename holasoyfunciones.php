@@ -28,7 +28,7 @@ function ValidarUseyPass ($User, $Pass,$Userie,$Passbase,$matriz){
 
 if ($User==$Userie){
   echo "<SCRIPT language='JavaScript'>
-          location.href='principal.php';
+          location.href='index.php';
         </SCRIPT> ";
   }
     else{   $Userie=" ";    ?>
@@ -53,7 +53,7 @@ function ValidarUseyPass1 ($User, $Pass,$Userie,$Passbase,$matriz){
 
 if ($User==$Userie){
   echo "<SCRIPT language='JavaScript'>
-          location.href='principal1.php';
+          location.href='index1.php';
         </SCRIPT> ";
   }
     else{   $Userie=" ";    ?>
@@ -130,24 +130,20 @@ function header_sahumerios($Nombre_de_usuario){
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
               <?php if (isset($Nombre_de_usuario) == true): ?>
-            <a class="nav-link" aria-current="page" href="InterfazUsuario.php"><i class="fa-solid fa-user"></i> <?php echo " Bienvenido $Nombre_de_usuario"?></a>
+            <a class="nav-link" aria-current="page" href="interfazUsuario.php"><i class="fa-solid fa-user"></i> <?php echo " Bienvenido $Nombre_de_usuario"?></a>
             <?php else:  ?>
               <a class="nav-link" aria-current="page" href="Login.php"><i class="fa-solid fa-user"></i> Iniciar sesion</a>
               <?php endif; ?>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a class="nav-link active" aria-current="page" href="index.php"><i class="fa-solid fa-house"></i> Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="playSound()"> <i class="fa-solid fa-cart-shopping"></i> Carrito de compras</a>
+            <a class="nav-link" href="carrito.php" onclick="playSound()"> <i class="fa-solid fa-cart-shopping"></i> Carrito de compras</a>
              <audio id="clickSound" src="emuo.mp3" preload="auto"></audio>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="catalogo.php"><i class="fa-solid fa-bag-shopping"></i> Catalogo</a>
-             <audio id="clickSound" src="emuo.mp3" preload="auto"></audio>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="playSound()"> <i class="fa-solid fa-gear"></i> Opciones</a>
              <audio id="clickSound" src="emuo.mp3" preload="auto"></audio>
           </li>
           <div class="dropdown show">
@@ -173,7 +169,7 @@ function header_sahumerios($Nombre_de_usuario){
 <?php
 }
 
-function body_sahumerios(){
+function body_sahumerios($Nombre_de_usuario){
   ?>
     <h3>Nuevo e imperdible</h3>
 
@@ -247,17 +243,27 @@ function body_sahumerios(){
             </div>
         </div>
     </section>
-
+    <?php if (isset($Nombre_de_usuario) == false): ?>
     <footer>
       <p>¡Te puedes registrar aquí!</p>
       <button class="register-button" onclick="document.location='Login.php'">Registrarme</button>
       <div class="footer-info">
         <p>Sahumerios Teiwaz</p>
         <a href="https://www.instagram.com/sahumerios.teiwaz/">Instagram</a>
-        <a href="https://facebook.com">Facebook</a>
+        <a href="https://whatsapp.com/channel/0029Vaqgs150lwgyMm5Izk2X">Whatsapp</a>
+      </div>
+    </footer>
+    <?php else: ?>
+      <footer>
+      <p><?php echo " Bienvenido $Nombre_de_usuario"?></p>
+      <div class="footer-info">
+        <p>Sahumerios Teiwaz</p>
+        <a href="https://www.instagram.com/sahumerios.teiwaz/">Instagram</a>
+        <a href="https://whatsapp.com/channel/0029Vaqgs150lwgyMm5Izk2X">Whatsapp</a>
       </div>
     </footer>
   </div>
+  <?php endif; ?>
   <?php
 }
 
@@ -273,7 +279,7 @@ function menu($Permiso){
     <div class="cajamenu">
         <nav class="menu">
             <ul>
-                <li><a href="principal.php" class="amenu">Home</a></li>
+                <li><a href="index.php" class="amenu">Home</a></li>
 				<li><a href="listadeusuario.php" class="amenu">Usuarios</a></li>
                 <li><a href="nuevo.php" class="amenu">Nueva Herramienta</a></li>
                 <li><a href="nuevousuario.php" class="amenu">Nuevo Usuario</a></li>
@@ -302,7 +308,7 @@ function menu($Permiso){
     <div class="cajamenu">
         <nav class="menu">
             <ul>
-                <li><a href="principal.php" class="amenu">Home</a></li>
+                <li><a href="index.php" class="amenu">Home</a></li>
                 <li><a href="listadeusuario.php" class="amenu">Usuarios</a></li>
                 <li><a href="nuevo.php" class="amenu">Nueva Herramienta</a></li>
                 <li><a href="nuevousuario.php" class="amenu">Nuevo Usuario</a></li>
@@ -327,7 +333,7 @@ function menu($Permiso){
     <div class="cajamenu">
         <nav class="menu">
             <ul>
-                <li><a href="principal.php" class="amenu">Home</a></li>
+                <li><a href="index.php" class="amenu">Home</a></li>
                 <li><a href="acercade.php" class="amenu">Acerca de</a></li>
                 <li><a href="salir.php" class="amenu">Salir</a></li>
             </ul>
@@ -345,7 +351,7 @@ function enc_tabla($consulta){
   //$resultado=mysqli_query($enlace,$consulta);
   
 ?>
-<!-- <link rel='stylesheet' href='css1/estilosprincipal.css'> -->
+<!-- <link rel='stylesheet' href='css1/estilosindex.css'> -->
  <section> 
     <nav classS="menu">
       <table id='encabezadousuario'>
@@ -425,7 +431,7 @@ $resultado=mysqli_query($Enlace,$string_consulta);
 
 
 // function enc_tabla_herramientaspaniol( $consulta){
-// // echo "<link rel='stylesheet' href='css1/estilos1.css' href='css1/estiloprincipal.css'>";
+// // echo "<link rel='stylesheet' href='css1/estilos1.css' href='css1/estiloindex.css'>";
 // echo "<table id='encabezadoherramientas'>
 //         <tr>
 //           <th id='titulotabla'>id herramientas</th>
@@ -550,7 +556,7 @@ if($R){
   alert('La nueva herramienta se ingreso correctamente');
   </script>
   <script language='javascript'>
-  location.href='principal.php';
+  location.href='index.php';
   </script>
   <?php
 }
@@ -577,11 +583,11 @@ if($R){
   ?>
   <script language='javascript'>
   alert('La consulta se ejecuto correctamente');
-   location.href='principal.php';
+   location.href='index.php';
   </script>
   <script language='javascript'>
     alert('Hubo un error al intentar modificar la herramienta' );
-  location.href='principal.php';
+  location.href='index.php';
   </script>
   <?php
 }
@@ -1335,7 +1341,7 @@ $R=Ejecutar_Consulta($link, $consulta);
     ?>
     <script language='javascript'>
     alert('No se pudo modificar el registro');
-    location.href='principal.php';
+    location.href='index.php';
     </script>
     <?php
   }
@@ -1344,7 +1350,7 @@ if ($FormaTicket=="ticket"){
     ?>
   <script language='javascript'>
     //location.href='PRUEBA TICKET/documento.php';
-    location.href="principal.php";
+    location.href="index.php";
     window.open('PRUEBA TICKET/documento.php');
   </script>
     <?php
@@ -1368,7 +1374,7 @@ if($R){
   ?>
   <script language='javascript'>
   alert('Se han eliminado todas las herramientas');
-   location.href='principal.php';
+   location.href='index.php';
   </script>
   
   <?php
@@ -1377,7 +1383,7 @@ if($R){
     ?>
     <script language='javascript'>
     alert('Hubo un error al intentar eliminar las herramientas' );
-  location.href='principal.php';
+  location.href='index.php';
   </script>
     <?php
   }
@@ -1531,7 +1537,7 @@ function ACTUALIZAR_CANTIDAD($VectorHerram){
 		$R10= Ejecutar_Consulta ($link, $updateHerramienta10);
 		/*se inserta el prestamo*/
 		INSERT_PRESTAMO($VectorHerram);
-		header('location:principal.php');
+		header('location:index.php');
 	}
 	
 }

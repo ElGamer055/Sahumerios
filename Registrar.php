@@ -10,27 +10,27 @@
     
     <title>Gordines</title>
 </head>
-    <form action= 'metadatos.php' method = 'post' class="wrapper">
+    <form action= 'metadatosRegister.php' method = 'post' class="wrapper">
         <div class="form-box login">
             <h2>Registro</h2>
             <div class="input-box">
-                <input type="text" placeholder=" " maxlength="40">
+                <input type="text" placeholder=" " name="Nombredeusuario" maxlength="40">
                 <label>Nombre de usuario</label>
             </div>
             <div class="input-box">
-                <input type="text" placeholder=" " maxlength="40">
+                <input type="text" placeholder=" " name="Nombre" maxlength="40">
                 <label>Nombre</label>
             </div>
             <div class="input-box">
-                <input type="text"  placeholder=" " maxlength="40">
+                <input type="text"  placeholder=" " name="Apellido" maxlength="40">
                 <label>Apellido</label>
             </div>
             <div class="input-box">
-                <input type="number" placeholder=" " maxlength="12">
+                <input type="number" placeholder=" " name="num" maxlength="12">
                 <label>Telefono</label>
             </div>
             <div class="input-box">
-                <input type="password" placeholder=" " maxlength="40">
+                <input type="password" placeholder=" " name="contrasena" maxlength="40">
                 <label>Contraseña</label>
             </div>
             <button type="submit" class="btn">Registrarse</button>

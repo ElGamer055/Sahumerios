@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/main.css">
     
     <title>Gordines</title>
+
+    
 </head>
 <body>
     <form action= 'metadatos.php' method = 'post' class="wrapper">
